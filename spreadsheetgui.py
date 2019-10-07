@@ -14,7 +14,7 @@ try:
 except FileNotFoundError:
     with open(csvFile, mode='w', newline="") as amazon_gui:
         amazon_gui = csv.writer(amazon_gui)
-        amazon_gui.writerow(['Product Name', 'trtrte'])
+        amazon_gui.writerow(['Product Name', 'Sales Rank', 'Purchase Price', 'Rank Number', 'Category', 'Sell Price', 'Seller Fees', 'Units Purchased', 'SKU'])
 
 
 HEIGHT = 700
@@ -97,7 +97,7 @@ def submit_info():
     else:
         with open(csvFile, mode = 'a') as amazon_gui:
             amazon_gui = csv.writer(amazon_gui)
-            amazon_gui.writerow([product_name.get(), sales_rank.get(), purchase_price.get(), sales_rank.get(), category.get(), sell_price.get(), seller_fees.get(), units_purchased.get(), entrysku.get()])
+            amazon_gui.writerow([product_name.get(), sales_rank.get(), purchase_price.get(), rank_number.get(), category.get(), sell_price.get(), seller_fees.get(), units_purchased.get(), entrysku.get()])
 
 
 now = datetime.now()
